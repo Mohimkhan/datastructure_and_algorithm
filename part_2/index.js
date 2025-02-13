@@ -30,4 +30,19 @@ const reverseInteger = (int) => {
   return +int.toString().split("").reverse().join("");
 };
 
-console.log(reverseInteger(5678));
+// console.log(reverseInteger(5678));
+
+const sentenceCapitalizer = (sen) => {
+  const senArr = sen.split(" ");
+  if (senArr.length === 0) return sen;
+
+  if (senArr.length === 1) {
+    return `${senArr[0][0].toUpperCase()}${senArr[0].slice(1)}`;
+  }
+
+  return `${senArr[0][0].toUpperCase()}${senArr[0].slice(
+    1
+  )} ${senArr[1][0].toUpperCase()}${senArr[1].slice(1)}`;
+};
+
+console.log(sentenceCapitalizer("hello world"));
