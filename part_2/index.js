@@ -33,7 +33,7 @@ const reverseInteger = (int) => {
 // console.log(reverseInteger(5678));
 
 const sentenceCapitalizer = (sen) => {
-  const senArr = sen.split(" ");
+  const senArr = sen.toLowerCase().split(" ");
   if (senArr.length === 0) return sen;
 
   if (senArr.length === 1) {
