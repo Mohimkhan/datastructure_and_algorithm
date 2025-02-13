@@ -45,4 +45,20 @@ const sentenceCapitalizer = (sen) => {
   )} ${senArr[1][0].toUpperCase()}${senArr[1].slice(1)}`;
 };
 
-console.log(sentenceCapitalizer("hello world"));
+// console.log(sentenceCapitalizer("hello world"));
+
+const fizzBuzz = (n) => {
+  for (let i = 0; i < n; i++) {
+    if (i % 3 === 0) {
+      console.log("fizz");
+    } else if (i % 5 === 0) {
+      console.log("Buzz");
+    } else if (i % 3 === 0 && i % 5 === 0) {
+      console.log("fizzBuzz");
+    } else {
+      console.log(i);
+    }
+  }
+};
+
+console.log(fizzBuzz(10));
