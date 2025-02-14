@@ -50,15 +50,27 @@ const sentenceCapitalizer = (sen) => {
 const fizzBuzz = (n) => {
   for (let i = 0; i < n; i++) {
     if (i % 3 === 0) {
-      console.log("fizz");
+      // console.log("fizz");
     } else if (i % 5 === 0) {
       console.log("Buzz");
     } else if (i % 3 === 0 && i % 5 === 0) {
-      console.log("fizzBuzz");
+      // console.log("fizzBuzz");
     } else {
-      console.log(i);
+      // console.log(i);
     }
   }
 };
 
-console.log(fizzBuzz(10));
+// console.log(fizzBuzz(10));
+
+const chunkSize = (arr = [], chunk = 2) => {
+  const chunkArr = [];
+
+  for (let i = 0; i < chunk; i++) {
+    chunkArr.push(arr.splice(0, chunk));
+  }
+
+  return chunkArr.filter((arr) => arr.length !== 0);
+};
+
+console.log(chunkSize([1, 2, 3, 4, 5, 7, 8], 3));
