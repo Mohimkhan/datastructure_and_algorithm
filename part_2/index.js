@@ -71,6 +71,10 @@ const fizzBuzz = (n) => {
 
 // console.log(fizzBuzz(10));
 
+/**
+ * ? Q:[chunkSize]
+ */
+
 const chunkSize = (arr = [], chunk = 2) => {
   const chunkArr = [];
 
