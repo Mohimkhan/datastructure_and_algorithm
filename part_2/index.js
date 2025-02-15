@@ -51,6 +51,10 @@ const sentenceCapitalizer = (sen) => {
 
 // console.log(sentenceCapitalizer("hello world"));
 
+/**
+ * ? Q:[fizzBuzz]
+ */
+
 const fizzBuzz = (n) => {
   for (let i = 0; i < n; i++) {
     if (i % 3 === 0) {
