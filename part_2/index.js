@@ -32,6 +32,10 @@ const reverseInteger = (int) => {
 
 // console.log(reverseInteger(5678));
 
+/**
+ * ? Q:[sentence_capitalizer]
+ */
+
 const sentenceCapitalizer = (sen) => {
   const senArr = sen.toLowerCase().split(" ");
   if (senArr.length === 0) return sen;
