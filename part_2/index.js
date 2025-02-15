@@ -87,6 +87,10 @@ const chunkSize = (arr = [], chunk = 2) => {
 
 // console.log(chunkSize([1, 2, 3, 4, 5, 7, 8], 3));
 
+/**
+ * ? Q:[twoSum]
+ */
+
 // Big(n^2)
 const twoSum = (arr, target) => {
   for (let i = 0; i < arr.length; i++) {
