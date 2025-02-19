@@ -49,8 +49,14 @@ class MyOwnArray {
         } else {
           return { done: true };
         }
-      }
+      },
     };
+  }
+
+  forEach(cb) {
+    for (let i = 0; i < this.length; i++) {
+      cb(this.data[i], i, [...Object.values(this.data)]);
+    }
   }
 }
 
@@ -65,4 +71,4 @@ arr1.push("dubai");
 arr1.shift();
 arr1.unshift("bye");
 
-console.log([...arr1]);
+console.log();
