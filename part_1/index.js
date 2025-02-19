@@ -53,10 +53,22 @@ class MyOwnArray {
     };
   }
 
-  forEach(cb) {
+  forEach(cb = () => {}) {
     for (let i = 0; i < this.length; i++) {
-      cb(this.data[i], i, [...Object.values(this.data)]);
+      cb(this.data[i], i, Object.values(this.data));
     }
+  }
+
+  map(cb = () => {}) {
+    const newArr = [];
+
+    for (let i = 0; i < this.length; i++) {
+      const element = this.data[i];
+
+      newArr.push(cb(element, i, Object.values(this.data)));
+    }
+
+    return newArr;
   }
 }
 
@@ -71,4 +83,4 @@ arr1.push("dubai");
 arr1.shift();
 arr1.unshift("bye");
 
-console.log();
+console.log(arr1);
