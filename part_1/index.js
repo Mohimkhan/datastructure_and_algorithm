@@ -70,6 +70,20 @@ class MyOwnArray {
 
     return newArr;
   }
+
+  filter(cb) {
+    const newArr = [];
+
+    for (let i = 0; i < this.length; i++) {
+      const element = this.data[i];
+
+      if (cb(element, i, Object.values(this.data))) {
+        newArr.push(element);
+      }
+    }
+
+    return newArr;
+  }
 }
 
 const arr1 = new MyOwnArray();
