@@ -28,6 +28,17 @@ class MyOwnArray {
     delete this.data[this.length];
     return shiftedEle;
   }
+
+  unshift(...values) {
+    const newElements = [...values, ...Object.values(this.data)];
+    for (let i = 0; i < newElements.length; i++) {
+      const element = newElements[i];
+      this.data[i] = element;
+    }
+
+    this.length = newElements.length;
+    return this.length;
+  }
 }
 
 const arr1 = new MyOwnArray();
@@ -39,6 +50,6 @@ arr1.push("dubai");
 // arr1.pop();
 
 arr1.shift();
-
+arr1.unshift("bye");
 
 console.log(arr1);
