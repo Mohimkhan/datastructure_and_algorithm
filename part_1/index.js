@@ -71,7 +71,7 @@ class MyOwnArray {
     return newArr;
   }
 
-  filter(cb) {
+  filter(cb = () => {}) {
     const newArr = [];
 
     for (let i = 0; i < this.length; i++) {
