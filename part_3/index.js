@@ -45,14 +45,30 @@ class LinkList {
     this.tail.next = null;
 
     this.length--;
+  }
 
-    console.log({ prev, temp });
+  unshift(value) {
+    const newNode = new Node(value);
+    const temp = this.head;
+
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    }
+
+    newNode.next = temp;
+    this.head = newNode;
+    this.length++;
+
   }
 }
+
+// {value: 1, next: {value: 10, next: {value: 25, next: {value: 40, next: null}}}}
 
 const myLinkList = new LinkList(1);
 myLinkList.push(10);
 myLinkList.push(25);
 myLinkList.push(40);
 myLinkList.pop();
+myLinkList.unshift(5);
 console.log(myLinkList);
