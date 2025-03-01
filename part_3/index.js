@@ -74,6 +74,10 @@ class LinkList {
     this.head = this.head.next;
     this.length--;
   }
+
+  get firstElement () {
+    return this.head;
+  }
 }
 
 // {value: 5, next: {value: 10, next: {value: 25, next: null}}}
@@ -85,4 +89,5 @@ myLinkList.push(40);
 myLinkList.pop();
 myLinkList.unshift(5);
 myLinkList.shift();
+console.log(myLinkList.firstElement);
 console.log(myLinkList);
