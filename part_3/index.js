@@ -67,6 +67,7 @@ class LinkList {
     if (!this.head.next || this.length === 1) {
       this.head = null;
       this.tail = null;
+      this.length = 0;
       return;
     }
 
@@ -83,8 +84,5 @@ myLinkList.push(25);
 myLinkList.push(40);
 myLinkList.pop();
 myLinkList.unshift(5);
-myLinkList.shift();
-myLinkList.shift();
-myLinkList.shift();
 myLinkList.shift();
 console.log(myLinkList);
