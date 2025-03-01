@@ -78,6 +78,10 @@ class LinkList {
   get firstElement () {
     return this.head;
   }
+
+  get lastElement () {
+    return this.tail;
+  }
 }
 
 // {value: 5, next: {value: 10, next: {value: 25, next: null}}}
@@ -90,4 +94,5 @@ myLinkList.pop();
 myLinkList.unshift(5);
 myLinkList.shift();
 console.log(myLinkList.firstElement);
+console.log(myLinkList.lastElement);
 console.log(myLinkList);
