@@ -59,11 +59,22 @@ class LinkList {
     newNode.next = temp;
     this.head = newNode;
     this.length++;
+  }
 
+  shift() {
+    if (!this.head) return;
+
+    if (!this.head.next || this.length === 1) {
+      this.head = null;
+      this.tail = null;
+    }
+
+    this.head = this.head.next;
+    this.length--;
   }
 }
 
-// {value: 1, next: {value: 10, next: {value: 25, next: {value: 40, next: null}}}}
+// {value: 5, next: {value: 10, next: {value: 25, next: null}}}
 
 const myLinkList = new LinkList(1);
 myLinkList.push(10);
@@ -71,4 +82,5 @@ myLinkList.push(25);
 myLinkList.push(40);
 myLinkList.pop();
 myLinkList.unshift(5);
+myLinkList.shift();
 console.log(myLinkList);
