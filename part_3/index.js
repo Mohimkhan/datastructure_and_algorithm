@@ -75,16 +75,28 @@ class LinkList {
     this.length--;
   }
 
-  get firstElement () {
+  get firstElement() {
     return this.head;
   }
 
-  get lastElement () {
+  get lastElement() {
     return this.tail;
+  }
+
+  elementByIndex(index) {
+    const newArr = [];
+    let temp = this.head;
+
+    while(temp) {
+      newArr.push(temp)
+      temp = temp.next;
+    }
+
+    return newArr[index];
   }
 }
 
-// {value: 5, next: {value: 10, next: {value: 25, next: null}}}
+// {value: 1, next: {value: 10, next: {value: 25, next: null}}}
 
 const myLinkList = new LinkList(1);
 myLinkList.push(10);
@@ -95,4 +107,5 @@ myLinkList.unshift(5);
 myLinkList.shift();
 console.log(myLinkList.firstElement);
 console.log(myLinkList.lastElement);
+console.log(myLinkList.elementByIndex(1));
 console.log(myLinkList);
