@@ -87,12 +87,23 @@ class LinkList {
     const newArr = [];
     let temp = this.head;
 
-    while(temp) {
-      newArr.push(temp)
+    while (temp) {
+      newArr.push(temp);
       temp = temp.next;
     }
 
     return newArr[index];
+  }
+
+  updateByIndex(index, value) {
+    let temp = this.elementByIndex(index);
+
+    if (temp) {
+      temp.value = value;
+      return true;
+    }
+
+    return false;
   }
 }
 
@@ -108,4 +119,5 @@ myLinkList.shift();
 console.log(myLinkList.firstElement);
 console.log(myLinkList.lastElement);
 console.log(myLinkList.elementByIndex(1));
+console.log(myLinkList.updateByIndex(1, 20));
 console.log(myLinkList);
