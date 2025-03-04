@@ -105,19 +105,47 @@ class LinkList {
 
     return false;
   }
+
+  insert(index, value) {
+    const newNode = new Node(value);
+
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    }
+
+    if (index === 0) {
+      this.unshift(value);
+      return;
+    }
+
+    if (index === this.length - 1) {
+      this.push(value);
+      return;
+    }
+
+    let temp = this.elementByIndex(index - 1);
+
+    newNode.next = temp.next;
+    temp.next = newNode;
+    this.length++;
+    return true;
+  }
 }
 
 // {value: 1, next: {value: 10, next: {value: 25, next: null}}}
 
-const myLinkList = new LinkList(1);
-myLinkList.push(10);
-myLinkList.push(25);
-myLinkList.push(40);
-myLinkList.pop();
-myLinkList.unshift(5);
-myLinkList.shift();
-console.log(myLinkList.firstElement);
-console.log(myLinkList.lastElement);
-console.log(myLinkList.elementByIndex(1));
-console.log(myLinkList.updateByIndex(1, 20));
-console.log(myLinkList);
+const myLinkedList = new LinkList(1);
+myLinkedList.push(10);
+myLinkedList.push(25);
+myLinkedList.push(40);
+myLinkedList.push(50);
+myLinkedList.pop();
+myLinkedList.unshift(5);
+myLinkedList.shift();
+console.log(myLinkedList.firstElement);
+console.log("last:", myLinkedList.lastElement);
+console.log(myLinkedList.updateByIndex(1, 20));
+console.log(myLinkedList.elementByIndex(1));
+console.log(myLinkedList.insert(2, 69));
+console.log("LinkedList: ", myLinkedList);
