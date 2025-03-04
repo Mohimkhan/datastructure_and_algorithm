@@ -5,7 +5,7 @@ class Node {
   }
 }
 
-class LinkList {
+class SinglyLinkedList {
   constructor(value) {
     this.head = new Node(value);
     this.tail = this.head;
@@ -147,7 +147,7 @@ class LinkList {
 
 // {value: 1, next: {value: 10, next: {value: 25, next: null}}}
 
-const myLinkedList = new LinkList(1);
+const myLinkedList = new SinglyLinkedList(1);
 myLinkedList.push(10);
 myLinkedList.push(25);
 myLinkedList.push(40);
