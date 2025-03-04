@@ -135,6 +135,14 @@ class LinkList {
   get size() {
     return this.length - 1;
   }
+
+  clear() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+
+    return true;
+  }
 }
 
 // {value: 1, next: {value: 10, next: {value: 25, next: null}}}
@@ -152,4 +160,5 @@ console.log("last:", myLinkedList.lastElement);
 console.log(myLinkedList.updateByIndex(1, 20));
 console.log(myLinkedList.elementByIndex(1));
 console.log(myLinkedList.insert(2, 69));
+// console.log(myLinkedList.clear());
 console.log("LinkedList: ", myLinkedList);
