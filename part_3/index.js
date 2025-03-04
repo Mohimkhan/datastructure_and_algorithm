@@ -131,6 +131,10 @@ class LinkList {
     this.length++;
     return true;
   }
+
+  get size() {
+    return this.length - 1;
+  }
 }
 
 // {value: 1, next: {value: 10, next: {value: 25, next: null}}}
