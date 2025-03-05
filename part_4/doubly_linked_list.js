@@ -52,5 +52,7 @@ class DoublyLinkedList {
 const doublyLinkedList = new DoublyLinkedList(1);
 
 doublyLinkedList.push(10);
+doublyLinkedList.push(20);
+doublyLinkedList.push(30);
 doublyLinkedList.pop();
 console.log("Doubly_Linked_list: ", doublyLinkedList);
