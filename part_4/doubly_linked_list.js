@@ -47,12 +47,26 @@ class DoublyLinkedList {
 
     return temp;
   }
+
+  unshift(value) {
+    const newNode = new Node(value);
+
+
+    this.head.prev = newNode;
+    newNode.next = this.head;
+    this.head = newNode;
+    this.length++;
+    
+    return true;
+  }
 }
+
 
 const doublyLinkedList = new DoublyLinkedList(1);
 
 doublyLinkedList.push(10);
 doublyLinkedList.push(20);
 doublyLinkedList.push(30);
-doublyLinkedList.pop();
+// doublyLinkedList.pop();
+doublyLinkedList.unshift(0);
 console.log("Doubly_Linked_list: ", doublyLinkedList);
