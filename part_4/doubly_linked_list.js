@@ -65,6 +65,8 @@ class DoublyLinkedList {
   }
 
   shift() {
+    let temp = this.head;
+
     if (!this.head) {
       return undefined;
     }
@@ -78,7 +80,10 @@ class DoublyLinkedList {
 
     this.head = this.head.next;
     this.head.prev = null;
+    temp.next = null;
     this.length--;
+
+    return temp;
   }
 }
 
