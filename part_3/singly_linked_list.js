@@ -170,7 +170,7 @@ myLinkedList.push(50);
 myLinkedList.pop();
 myLinkedList.unshift(5);
 myLinkedList.shift();
-console.log(myLinkedList.firstElement);
+console.log("first: ", myLinkedList.firstElement);
 console.log("last:", myLinkedList.lastElement);
 console.log(myLinkedList.updateByIndex(1, 20));
 console.log(myLinkedList.elementByIndex(1));
