@@ -143,6 +143,21 @@ class SinglyLinkedList {
 
     return true;
   }
+
+  reverseList() {
+    let temp = this.head;
+    this.head = this.tail;
+    this.tail = temp;
+    let next = temp;
+    let prev = null;
+
+    for (let i = 0; i < this.length; i++) {
+      next = temp.next;
+      temp.next = prev;
+      prev = temp;
+      temp = next;
+    }
+  }
 }
 
 // {value: 1, next: {value: 10, next: {value: 25, next: null}}}
@@ -161,4 +176,5 @@ console.log(myLinkedList.updateByIndex(1, 20));
 console.log(myLinkedList.elementByIndex(1));
 console.log(myLinkedList.insert(2, 69));
 // console.log(myLinkedList.clear());
+console.log(myLinkedList.reverseList());
 console.log("LinkedList: ", myLinkedList);
