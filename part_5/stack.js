@@ -25,11 +25,22 @@ class Stack {
 
     return newNode;
   }
+
+  pop() {
+    let temp = this.first;
+
+    this.first = this.first.next;
+    temp.next = null;
+    this.length--;
+
+    return temp;
+  }
 }
 
-// {first: {value: 1, next: null}}
+// {first: {value: 1, next: {value: 2, next: {value: 3, next: null}}}}
 
 const stack = new Stack(1);
-console.log(stack.push(2))
-console.log(stack.push(3))
+console.log("push ", stack.push(2));
+console.log("push ", stack.push(3));
+console.log("pop ", stack.pop());
 console.log("stack: ", stack);
