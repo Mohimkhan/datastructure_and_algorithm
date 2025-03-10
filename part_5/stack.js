@@ -11,7 +11,21 @@ class Stack {
     this.first = newNode;
     this.length = 1;
   }
+
+  push(value) {
+    const newNode = new Node(value);
+
+    newNode.next = this.first;
+    this.first = newNode;
+    this.length++;
+
+    return newNode;
+  }
 }
 
+// {first: {value: 1, next: null}}
+
 const stack = new Stack(1);
-console.log("stack ", stack);
+console.log(stack.push(2))
+console.log(stack.push(3))
+console.log("stack: ", stack);
