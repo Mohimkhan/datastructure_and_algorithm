@@ -10,5 +10,10 @@ class Queue {
     const newNode = new Node(value);
     this.first = newNode;
     this.last = newNode;
+    this.length = 1;
   }
 }
+
+const queue = new Queue(1);
+
+console.log({queue});
