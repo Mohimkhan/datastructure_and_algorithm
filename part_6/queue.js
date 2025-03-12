@@ -15,6 +15,12 @@ class Queue {
 
   enqueue(value) {
     const newNode = new Node(value);
+
+    if (this.length === 0) {
+      this.first = newNode;
+      this.last = newNode;
+    }
+    
     this.last.next = newNode;
     this.last = newNode;
     this.length++;
@@ -34,6 +40,6 @@ class Queue {
 
 const queue = new Queue(1);
 queue.enqueue(1);
-queue.enqueue(2); 
+queue.enqueue(2);
 queue.dequeue();
-console.log({queue});
+console.log({ queue });
