@@ -15,14 +15,25 @@ class Queue {
 
   enqueue(value) {
     const newNode = new Node(value);
-    this.first.next = newNode;
+    this.last.next = newNode;
     this.last = newNode;
     this.length++;
     return this.last;
   }
+
+  dequeue() {
+    let temp = this.first;
+
+    this.first = this.first.next;
+    temp.next = null;
+    this.length--;
+
+    return temp;
+  }
 }
 
 const queue = new Queue(1);
-queue.enqueue(2);
-queue.enqueue(3);
+queue.enqueue(1);
+queue.enqueue(2); 
+queue.dequeue();
 console.log({queue});
