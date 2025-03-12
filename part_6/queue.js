@@ -20,7 +20,7 @@ class Queue {
       this.first = newNode;
       this.last = newNode;
     }
-    
+
     this.last.next = newNode;
     this.last = newNode;
     this.length++;
@@ -29,6 +29,8 @@ class Queue {
 
   dequeue() {
     let temp = this.first;
+
+    if (this.length === 0) return null;
 
     this.first = this.first.next;
     temp.next = null;
