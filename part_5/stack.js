@@ -39,6 +39,8 @@ class Stack {
   }
 
   min() {
+    if (this.length === 0) return undefined;
+    
     let current = this.first;
     let minValue = current.value;
 
