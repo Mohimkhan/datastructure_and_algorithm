@@ -40,7 +40,7 @@ class Queue {
   }
 }
 
-const queue = new Queue(1);
+const queue = new Queue(0);
 queue.enqueue(1);
 queue.enqueue(2);
 queue.dequeue();
