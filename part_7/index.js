@@ -42,7 +42,7 @@ const reverseStr = (str) => {
     stack.push(char);
   }
 
-  for (let char of str) {
+  for (let _ of str) {
     output += stack.pop();
   }
 
