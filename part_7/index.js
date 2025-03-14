@@ -1,3 +1,7 @@
+/**
+ * ? Q[1]: isValidParenthesis
+ */
+
 const isValidParenthesis = (str) => {
   const stack = [];
   const brackets = {
@@ -25,6 +29,10 @@ console.log(isValidParenthesis("(){}[]")); // true
 console.log(isValidParenthesis("([)]")); // false
 console.log(isValidParenthesis("()")); // true
 console.log(isValidParenthesis("(")); // false
+
+/**
+ * ? Q[2]: reverseStr
+ */
 
 const reverseStr = (str) => {
   const stack = [];
