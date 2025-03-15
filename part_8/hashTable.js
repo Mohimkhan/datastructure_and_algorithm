@@ -16,4 +16,16 @@ class HashTable {
 
     return sum;
   }
+
+  set(key, value) {
+    const index = this._hash(key);
+
+    if (!this.keyMap[index]) this.keyMap = [];
+
+    this.keyMap[index]?.push([key, value]);
+    return this;
+  }
 }
+
+const hashTable = new HashTable();
+console.log(hashTable.set("john", "555-333-999"));
