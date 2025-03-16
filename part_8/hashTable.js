@@ -25,7 +25,22 @@ class HashTable {
     this.keyMap[index]?.push([key, value]);
     return this;
   }
+
+  get(key) {
+    const index = this._hash(key);
+
+    if (this.keyMap[index]) {
+      for (let i = 0; i < this.keyMap[index].length; i++) {
+        if (this.keyMap[index][i][0] === key) {
+          return this.keyMap[index][0][1];
+        }
+      }
+    }
+
+    return undefined;
+  }
 }
 
 const hashTable = new HashTable();
-console.log(hashTable.set("john", "555-333-999"));
+hashTable.set("john", "555-333-999");
+console.log(hashTable.get("john"));
