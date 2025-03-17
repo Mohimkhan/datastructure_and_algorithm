@@ -3,6 +3,9 @@ const wordCounter = (text, word) => {
 
     const regex = new RegExp(`${word}`, "ig");
     return text.match(regex).length;
+
+    // attempt 2
+    // return text.split(" ").filter((str) => str.toLowerCase() === word.toLowerCase()).length;
 }
 
 
