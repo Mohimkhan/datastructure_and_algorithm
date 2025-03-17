@@ -56,10 +56,27 @@ class HashTable {
 
     return keys;
   }
+
+  getAllValues() {
+    const values = [];
+
+    for (let i = 0; i < this.keyMap.length; i++) {
+      const element = this.keyMap[i];
+
+      if (element) {
+        for (let j = 0; j < element.length; j++) {
+          const value = element[j][1];
+          values.push(value);
+        }
+      }
+    }
+
+    return values;
+  }
 }
 
 const hashTable = new HashTable();
 hashTable.set("john", "665-333-909");
 hashTable.set("baba", "555-389-939");
 hashTable.set("dopa", "355-903-469");
-console.log(hashTable.getAllKeys("john"));
+console.log(hashTable.getAllValues());
