@@ -39,8 +39,27 @@ class HashTable {
 
     return undefined;
   }
+
+  getAllKeys() {
+    const keys = [];
+
+    for (let i = 0; i < this.keyMap.length; i++) {
+      const element = this.keyMap[i];
+
+      if (element) {
+        for (let j = 0; j < element.length; j++) {
+          const key = element[j][0];
+          keys.push(key);
+        }
+      }
+    }
+
+    return keys;
+  }
 }
 
 const hashTable = new HashTable();
-hashTable.set("john", "555-333-999");
-console.log(hashTable.get("john"));
+hashTable.set("john", "665-333-909");
+hashTable.set("baba", "555-389-939");
+hashTable.set("dopa", "355-903-469");
+console.log(hashTable.getAllKeys("john"));
