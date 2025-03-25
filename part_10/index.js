@@ -43,6 +43,26 @@ class BST {
       }
     }
   }
+
+  inludes(value) {
+    if (!this.root) {
+      return false;
+    }
+
+    let temp = this.root;
+
+    while(temp) {
+      if (value < temp.value) {
+        temp = temp.left;
+      } else if (value > temp.value) {
+        temp= temp.right;
+      } else if (value === temp.value) {
+        return true;
+      }
+    }
+
+    return false;
+  }
 }
 
 const tree = new BST();
@@ -52,4 +72,5 @@ tree.insert(3);
 tree.insert(1);
 tree.insert(7);
 tree.insert(9);
+console.log(tree.inludes(1))
 console.log(tree);
