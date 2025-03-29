@@ -4,7 +4,7 @@ const countDown = (number) => {
     return;
   }
   console.log(`number: ${number}`);
-  countDown(number - 1);
+  return countDown(number - 1);
 };
 
 countDown(5);
