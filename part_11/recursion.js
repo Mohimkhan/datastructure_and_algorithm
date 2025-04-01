@@ -23,3 +23,13 @@ const fibonacci = (n) => {
 };
 
 console.log(fibonacci(7));
+
+// Reverse a String
+
+const reverseString = (str) => {
+  if (str === "") return "";
+
+  return str[str.length - 1] + reverseString(str.slice(0, str.length - 1));
+};
+
+console.log(reverseString("mohim khan"));
