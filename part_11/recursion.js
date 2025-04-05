@@ -26,6 +26,12 @@ console.log(fibonacci(7));
 
 // Reverse a String
 
+/**
+ * The `reverseString` function recursively reverses a given string.
+ * @param str - "nahk mihom"
+ * @returns The `reverseString` function is returning the input string "mohim khan" reversed. So, the
+ * output would be "nahk mihom".
+ */
 const reverseString = (str) => {
   if (str === "") return "";
 
