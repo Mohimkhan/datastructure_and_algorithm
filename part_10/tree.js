@@ -83,6 +83,19 @@ class BST {
 
     return data;
   }
+
+  // Dearth First Search (preorder)
+  dfspreOrder(node = this.root, data = []) {
+    if (node === null) return data;
+
+    data.push(node.value);
+
+    if (node.left) this.dfspreOrder(node.left, data);
+    if (node.right) this.dfspreOrder(node.right, data);
+
+    return data;
+  }
+  
 }
 
 const tree = new BST();
@@ -94,3 +107,4 @@ tree.insert(7);
 tree.insert(9);
 console.log(tree.inludes(1))
 console.log(tree.bfs());
+console.log(tree.dfspreOrder());
